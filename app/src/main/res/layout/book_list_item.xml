@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Book Title"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:text="@string/book_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Author Name"
+        android:text="@string/author"
         app:layout_constraintStart_toStartOf="@+id/bookTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/bookTitleTextView" />
 
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Genre"
+        android:text="@string/genre"
         app:layout_constraintStart_toStartOf="@+id/authorNameTextView"
         app:layout_constraintTop_toBottomOf="@+id/authorNameTextView" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Year"
+        android:text="@string/year"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/genreTextView"
         app:layout_constraintTop_toBottomOf="@+id/genreTextView" />

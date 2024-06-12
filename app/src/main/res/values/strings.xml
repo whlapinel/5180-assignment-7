@@ -7,4 +7,5 @@
     <string name="author">Author:</string>
     <string name="genre">Genre:</string>
     <string name="year">Year:</string>
+    <string name="dynamic">(Dynamic)</string>
 </resources>

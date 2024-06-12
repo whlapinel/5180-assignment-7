@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
@@ -56,6 +57,16 @@ public class BooksFragment extends Fragment {
         View view = binding.getRoot();
         BookAdapter bookAdapter = new BookAdapter(getContext(), mBooks);
         binding.bookListView.setAdapter(bookAdapter);
+        binding.buttonBack.setOnClickListener(v -> {
+            mListener.closeBooks();
+        });
+        binding.bookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Book book = mBooks.get(position);
+                mListener.gotoBookDetails(book);
+            }
+        });
         return view;
     }
 

@@ -44,7 +44,15 @@ public class BookDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentBookDetailsBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        View view = binding.getRoot();
+        binding.detailsTextViewBookTitle.setText(mBook.getTitle());
+        binding.detailsTextViewAuthorName.setText(mBook.getAuthor());
+        binding.detailsTextViewGenre.setText(mBook.getGenre());
+        binding.detailsTextViewYear.setText(String.valueOf(mBook.getYear()));
+        binding.buttonBack.setOnClickListener(v -> {
+            mListener.closeBookDetails();
+        });
+        return view;
     }
 
     @Override
